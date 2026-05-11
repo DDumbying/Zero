@@ -20,8 +20,6 @@ Each project in this series exists because the previous one introduces a limitat
 
 By the end of the roadmap, the entire system should start feeling connected instead of fragmented.
 
----
-
 # Project Structure
 
 ```txt
@@ -49,8 +47,6 @@ README.md
 Makefile
 ```
 
----
-
 # Roadmap
 
 # 01 — Hex Viewer
@@ -75,8 +71,6 @@ This project exists to expose the binary nature of data and build awareness arou
 
 * [Hex Viewer](./01-hex-viewer)
 
----
-
 # 02 — ELF Parser
 
 ## Problem
@@ -100,8 +94,6 @@ This project exists to explore how programs are represented on disk before execu
 
 * [ELF Parser](./02-elf-parser)
 
----
-
 # 03 — Mini Shell
 
 ## Problem
@@ -121,8 +113,6 @@ This project exists to understand process creation and execution.
 ## Project
 
 * [Mini Shell](./03-mini-shell)
-
----
 
 # 04 — Pipes & Redirection
 
@@ -145,8 +135,6 @@ This project exists to understand UNIX I/O abstractions.
 
 * [Shell Pipes & Redirection](./04-shell-pipes)
 
----
-
 # 05 — Text Editor
 
 ## Problem
@@ -167,8 +155,6 @@ This project exists to expose how terminals actually work.
 
 * [Text Editor](./05-text-editor)
 
----
-
 # 06 — Memory Allocator
 
 ## Problem
@@ -188,8 +174,6 @@ This project exists to understand heap management.
 ## Project
 
 * [Memory Allocator](./06-memory-allocator)
-
----
 
 # 07 — TCP Chat Server
 
@@ -212,8 +196,6 @@ This project exists to understand low-level networking.
 
 * [TCP Chat Server](./07-chat-server)
 
----
-
 # 08 — Event Loop
 
 ## Problem
@@ -233,8 +215,6 @@ This project exists to understand asynchronous and event-driven systems.
 ## Project
 
 * [Event Loop Server](./08-event-loop)
-
----
 
 # 09 — System Monitor
 
@@ -256,8 +236,6 @@ This project exists to inspect and understand live system state.
 
 * [System Monitor](./09-system-monitor)
 
----
-
 # 10 — Debugger
 
 ## Problem
@@ -277,8 +255,6 @@ This project exists to understand runtime control and execution tracing.
 ## Project
 
 * [Debugger](./10-debugger)
-
----
 
 # 11 — Bytecode Virtual Machine
 
@@ -301,8 +277,6 @@ This project exists to understand virtual execution systems.
 
 * [Bytecode VM](./11-bytecode-vm)
 
----
-
 # 12 — Init System
 
 ## Problem
@@ -322,8 +296,6 @@ This project exists to understand service supervision and system lifecycle manag
 ## Project
 
 * [Init System](./12-init-system)
-
----
 
 # Final Goal
 
