@@ -225,7 +225,7 @@ The **Concepts**:
 * Sessions
 * System startup
 
-# Final Goal
+## Final Goal
 
 By the end of this series, the following ideas should feel connected instead of isolated:
 
