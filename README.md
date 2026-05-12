@@ -20,22 +20,22 @@ Each project in this series exists because the previous one introduces a limitat
 
 By the end of the roadmap, the entire system should start feeling connected instead of fragmented.
 
-# Project Structure
+## TODO
 
-```txt
-01-hex-viewer/
-02-elf-parser/
-03-mini-shell/
-04-shell-pipes/
-05-text-editor/
-06-memory-allocator/
-07-chat-server/
-08-event-loop/
-09-system-monitor/
-10-debugger/
-11-bytecode-vm/
-12-init-system/
-```
+
+- [ ] 01-hex-viewer/ (*WIP*)
+- [ ] 02-elf-parser/
+- [ ] 03-mini-shell/
+- [ ] 04-shell-pipes/
+- [ ] 05-text-editor/
+- [ ] 06-memory-allocator/
+- [ ] 07-chat-server/
+- [ ] 08-event-loop/
+- [ ] 09-system-monitor/
+- [ ] 10-debugger/
+- [ ] 11-bytecode-vm/
+- [ ] 12-init-system/
+
 
 Each project should contain:
 
@@ -47,17 +47,15 @@ README.md
 Makefile
 ```
 
-# Roadmap
+## Roadmap
 
-# 01 — Hex Viewer
+## 01 - [Hex Viewer](./01-hex-viewer)
 
-## Problem
-
-Programs usually hide the fact that files are just raw bytes.
+**Problem**: Programs usually hide the fact that files are just raw bytes.
 
 This project exists to expose the binary nature of data and build awareness around memory representation.
 
-## Concepts
+And here is the **Concepts**:
 
 * Binary data
 * Buffers
@@ -67,21 +65,15 @@ This project exists to expose the binary nature of data and build awareness arou
 * Hexadecimal representation
 * Pointer arithmetic
 
-## Project
+## 02 - [ELF Parser](./02-elf-parser)
 
-* [Hex Viewer](./01-hex-viewer)
-
-# 02 — ELF Parser
-
-## Problem
-
-After seeing raw bytes, the next question becomes:
+The **Problem** here is that After seeing raw bytes, the next question becomes:
 
 How are executable files actually structured?
 
 This project exists to explore how programs are represented on disk before execution.
 
-## Concepts
+And here is the **Concepts**:
 
 * ELF headers
 * Sections
@@ -90,19 +82,13 @@ This project exists to explore how programs are represented on disk before execu
 * Struct layout
 * Executable loading
 
-## Project
+## 03 - [Mini Shell](./03-mini-shell)
 
-* [ELF Parser](./02-elf-parser)
-
-# 03 — Mini Shell
-
-## Problem
-
-If executables are just files, how does the operating system run them?
+**Problem**: If executables are just files, how does the operating system run them?
 
 This project exists to understand process creation and execution.
 
-## Concepts
+**Concepts**:
 
 * Processes
 * fork/exec model
@@ -110,20 +96,14 @@ This project exists to understand process creation and execution.
 * Waiting for children
 * Environment variables
 
-## Project
+## 04 - [Shell Pipes & Redirection](./04-shell-pipes)
 
-* [Mini Shell](./03-mini-shell)
-
-# 04 — Pipes & Redirection
-
-## Problem
-
-Processes alone are not enough.
+**Problem**: Processes alone are not enough.
 Programs must communicate with each other.
 
 This project exists to understand UNIX I/O abstractions.
 
-## Concepts
+The **Concepts**:
 
 * File descriptors
 * Pipes
@@ -131,19 +111,13 @@ This project exists to understand UNIX I/O abstractions.
 * stdin/stdout/stderr
 * UNIX pipelines
 
-## Project
+## 05 - [Text Editor](./05-text-editor)
 
-* [Shell Pipes & Redirection](./04-shell-pipes)
-
-# 05 — Text Editor
-
-## Problem
-
-Interactive terminal applications appear magical until you understand terminal behavior.
+**Problem**: Interactive terminal applications appear magical until you understand terminal behavior.
 
 This project exists to expose how terminals actually work.
 
-## Concepts
+Thhe **Concepts**:
 
 * Raw mode
 * Escape sequences
@@ -151,19 +125,13 @@ This project exists to expose how terminals actually work.
 * Screen rendering
 * Input handling
 
-## Project
+## 06 - [Memory Allocator](./06-memory-allocator)
 
-* [Text Editor](./05-text-editor)
-
-# 06 — Memory Allocator
-
-## Problem
-
-Applications constantly request and release memory, but where does that memory come from?
+**Problem**: Applications constantly request and release memory, but where does that memory come from?
 
 This project exists to understand heap management.
 
-## Concepts
+**Concepts**:
 
 * Heap internals
 * Free lists
@@ -171,20 +139,14 @@ This project exists to understand heap management.
 * Alignment
 * Virtual memory
 
-## Project
+## 07 - [TCP Chat Server](./07-chat-server)
 
-* [Memory Allocator](./06-memory-allocator)
-
-# 07 — TCP Chat Server
-
-## Problem
-
-Programs should not only communicate locally.
+**Problem**; Programs should not only communicate locally.
 They should communicate across machines.
 
 This project exists to understand low-level networking.
 
-## Concepts
+The **Concepts**:
 
 * TCP/IP
 * Sockets
@@ -192,19 +154,13 @@ This project exists to understand low-level networking.
 * Blocking I/O
 * Connections
 
-## Project
+## 08 - [Event Loop Server](./08-event-loop)
 
-* [TCP Chat Server](./07-chat-server)
-
-# 08 — Event Loop
-
-## Problem
-
-Traditional blocking architectures do not scale efficiently.
+**Problem**: Traditional blocking architectures do not scale efficiently.
 
 This project exists to understand asynchronous and event-driven systems.
 
-## Concepts
+**Concepts**:
 
 * Non-blocking I/O
 * Event loops
@@ -212,19 +168,13 @@ This project exists to understand asynchronous and event-driven systems.
 * Readiness notification
 * Async architecture
 
-## Project
+## 09 - [System Monitor](./09-system-monitor)
 
-* [Event Loop Server](./08-event-loop)
-
-# 09 — System Monitor
-
-## Problem
-
-Operating systems expose runtime information internally.
+**Problem**: Operating systems expose runtime information internally.
 
 This project exists to inspect and understand live system state.
 
-## Concepts
+The **Concepts**:
 
 * procfs
 * Process inspection
@@ -232,19 +182,13 @@ This project exists to inspect and understand live system state.
 * Memory statistics
 * Kernel interfaces
 
-## Project
+## 10 - [Debugger](./10-debugger)
 
-* [System Monitor](./09-system-monitor)
-
-# 10 — Debugger
-
-## Problem
-
-Programs are usually treated as black boxes during execution.
+**Problem**: Programs are usually treated as black boxes during execution.
 
 This project exists to understand runtime control and execution tracing.
 
-## Concepts
+**Concepts**:
 
 * ptrace
 * Registers
@@ -252,20 +196,14 @@ This project exists to understand runtime control and execution tracing.
 * Instruction stepping
 * Process tracing
 
-## Project
+## 11 - [Bytecode VM](./11-bytecode-vm)
 
-* [Debugger](./10-debugger)
-
-# 11 — Bytecode Virtual Machine
-
-## Problem
-
-Real CPUs execute instructions.
+**Problem**: Real CPUs execute instructions.
 Can software simulate that execution model?
 
 This project exists to understand virtual execution systems.
 
-## Concepts
+The **Concepts**:
 
 * Bytecode
 * Stack machines
@@ -273,29 +211,19 @@ This project exists to understand virtual execution systems.
 * Instruction dispatch
 * Virtual execution
 
-## Project
+## 12 - [Init System](./12-init-system)
 
-* [Bytecode VM](./11-bytecode-vm)
-
-# 12 — Init System
-
-## Problem
-
-Systems need a process responsible for managing all other services.
+**Problem**: Systems need a process responsible for managing all other services.
 
 This project exists to understand service supervision and system lifecycle management.
 
-## Concepts
+The **Concepts**:
 
 * Daemons
 * Process supervision
 * Signal handling
 * Sessions
 * System startup
-
-## Project
-
-* [Init System](./12-init-system)
 
 # Final Goal
 
