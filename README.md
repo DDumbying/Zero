@@ -23,7 +23,7 @@ By the end of the roadmap, the entire system should start feeling connected inst
 ## TODO
 
 
-- [ ] 01-hex-viewer/ (*WIP*)
+- [x] 01-hex-viewer/
 - [ ] 02-elf-parser/
 - [ ] 03-mini-shell/
 - [ ] 04-shell-pipes/
