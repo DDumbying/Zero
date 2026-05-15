@@ -64,7 +64,7 @@ Our sweet compiler have **Four** stages to compile the file into machine languag
 Preprocessor -> Compiler -> Assembler -> Linker
 ```
 
-### Preprocessor
+### Preprocessing
 
 So let's take our awsome file into it's sompiling journey and see how this process looks..
 
@@ -165,6 +165,110 @@ And this is all about the **Preprocessing** phase.
 
 
 
-### The Compiler
+### The Compiling
+
+Acually the compiler is NOT "transslate text directly into assembly (The next phase)", instead. It's progressively transforms representations from human readable syntax into structured computational meaning. And finally into machine-oriented representations.
+
+The idea Alone is extreamly important, so how things done?
+
+### Lexial Analysis
+
+In This step the compiler breaks down the **Preprocessed** source code into takens. Tokens are the smallest meaningfull units of the language, such as keywords, identifiers, operators, and literals.
+
+For example, if we have this line of code:
+
+```
+int x = 10;
+```
+
+This step out put will look like this:
+
+```
+Keyword -> int
+Identifier -> x
+Oprator -> =
+Number -> 10
+Semicolon -> ;
+```
+
+Then the next step comes..
+
+### Syntax Analysis
+
+Commonly known as parsing, is the phase where the compiler validaties the the grammatical structure of the token stream according to the language grammer.
+
+During the process the compiler builds structural representations of the program, often starting withg parse tree..
+
+Example:
+
+```
+10 + 20 * 3
+```
+
+So parser understand precedence:
+
+### Abstract Syntax Tree (AST)
+
+```
+      +
+     / \
+   10   *
+       / \
+      20  3
+```
+
+This ^ is An **Abstract Syntax Tree (AST)**. It's called a *Tree* because it has nodes connected hierarchically, like a file system tree (if you even know about it, duh).
+
+So what this tree means?
+
+it actually represent the prev exepression..
+
+```
+10 + 20 * 3
+```
+
+but instead of representing it as text, the compiler represents it structurely.
+
+Let's break this tree down to understand the core concept and why we need this?
+
+**The root Node is `+`**: which means that the main operation of the expression is **addition**!
+
+```
+      +
+     / \
+```
+
+The compiler already understand *precedence*, *relationships*, *expression structure*.
+
+**Left side has `10`:** This is the left operand of `+`.
+
+```
+      +
+     /
+   10
+```
+
+**The Right Side**:
+
+```
+      *
+     / \
+    20  3
+```
+This means that the right operand of `+` is another operation, **(Multiplication)**, So `20 * 3` gets evaluated first.
+
+**Why The Tree Looks Like This?**
+
+Because multiplication has higher precedence that addition. So mathimatically `10 + (20 * 3)`, Not `(10 + 20) * 3`, The parser understands this using **[Grammer rules]()**
+
+> :IMPORTANT: **AST** represents semantic strucure, not textual structure.
+
+### Semantic Analysis
+
+This is where the compiler starts understanding "Meanings".
+
+Things like, *understanding variables*, *type mismatch*, *invalid function calls*, *scope resolution*. for example if you assign a string to an interger variables, and so on.
+
+This phase psychologically important because before this point, the compiler mostly understands structure. Here it starts understanding the world (program correctness).
 
 
