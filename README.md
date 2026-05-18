@@ -252,3 +252,7 @@ After finishing this roadmap, you should be capable of:
 * Understanding memory behavior
 * Building scalable networked applications
 * Navigating kernel interfaces confidently
+
+## Note
+
+I am just doing this for fun, because why not?
