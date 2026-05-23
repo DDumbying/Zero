@@ -24,7 +24,7 @@ By the end of the roadmap, the entire system should start feeling connected inst
 
 
 - [x] 01-hex-viewer/
-- [ ] 02-elf-parser/ *WIP*
+- [ ] 02-elf-parser/ (*WIP*)
 - [ ] 03-mini-shell/
 - [ ] 04-shell-pipes/
 - [ ] 05-text-editor/
